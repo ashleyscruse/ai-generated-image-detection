@@ -1,0 +1,122 @@
+# Project Configuration
+# AI-Generated Evidence Detection Benchmark
+
+# Dataset specifications
+dataset:
+  total_real_images: 10000
+  total_synthetic_images: 10000
+
+  # Real image categories and target counts
+  real_categories:
+    people: 2500
+    vehicles: 2500
+    indoor_scenes: 2000
+    outdoor_scenes: 2000
+    objects: 1000
+
+  # Synthetic image categories and target counts
+  synthetic_categories:
+    surveillance_security: 3000
+    evidence_style: 3000
+    bodycam_style: 2500
+    documents: 1500
+
+# Image generation settings
+generation:
+  models:
+    - stabilityai/stable-diffusion-xl-base-1.0
+    - black-forest-labs/FLUX.1-schnell
+    - stabilityai/stable-diffusion-2-1
+
+  default_resolution: 1024
+  batch_size: 4
+  seed_start: 42
+
+# Degradation settings
+degradation:
+  # Clean version: no degradation
+  clean: {}
+
+  # Moderate version: decent surveillance footage
+  moderate:
+    jpeg_quality: 50
+    blur_sigma: 1.0
+    contrast_factor: 0.8
+
+  # Heavy version: poor bodycam/old CCTV
+  heavy:
+    jpeg_quality: 30
+    downscale_factor: 0.5
+    noise_sigma: 25
+    blur_sigma: 2.0
+
+# Individual augmentation ranges (for experimentation)
+augmentations:
+  jpeg_compression:
+    quality_levels: [20, 40, 70]
+
+  resolution_downscale:
+    factors: [0.25, 0.5]
+
+  gaussian_blur:
+    sigma_levels: [1, 2, 3]
+
+  gaussian_noise:
+    sigma_levels: [10, 25, 50]
+
+  salt_pepper_noise:
+    density_levels: [0.01, 0.03, 0.05]
+
+  contrast:
+    factors: [0.5, 0.7]
+
+  brightness:
+    shift_range: 0.2  # ±20%
+
+# Detection tools to evaluate
+detection_tools:
+  - name: hive_moderation
+    type: api
+    url: https://api.hivemoderation.com/
+
+  - name: illuminarty
+    type: web
+    url: https://illuminarty.ai/
+
+  - name: ai_or_not
+    type: api
+    url: https://api.aiornot.com/
+
+  - name: huggingface_sdxl_detector
+    type: model
+    model_id: umm-maybe/AI-image-detector
+
+# Evaluation metrics
+evaluation:
+  metrics:
+    - accuracy
+    - precision
+    - recall
+    - f1_score
+    - auc_roc
+
+  # Breakdown categories for analysis
+  breakdown_by:
+    - degradation_level  # clean, moderate, heavy
+    - image_category     # surveillance, evidence, bodycam, documents
+    - generator          # sdxl, flux, sd2.1
+    - real_vs_synthetic
+
+# Paths (relative to project root)
+paths:
+  raw_real: data/raw/real
+  raw_synthetic: data/raw/synthetic
+  processed_clean: data/processed/clean
+  processed_moderate: data/processed/moderate
+  processed_heavy: data/processed/heavy
+  results_metrics: results/metrics
+  results_figures: results/figures
+  results_reports: results/reports
+
+# Random seed for reproducibility
+random_seed: 42
