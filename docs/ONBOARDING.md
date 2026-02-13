@@ -16,7 +16,7 @@ Make sure you have:
 ### Step 1: Clone the repository
 
 ```bash
-git clone <repo-url>
+git clone https://github.com/ashleyscruse/ai-generated-image-detection.git
 cd ai-generated-image-detection
 ```
 
@@ -221,4 +221,4 @@ Complete these items in your first week:
 
 ## Questions?
 
-Contact Dr. Ashley Scruse: [email TBD]
+Contact Dr. Ashley Scruse: ashley.scruse@morehouse.edu

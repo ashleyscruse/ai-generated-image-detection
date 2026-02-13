@@ -32,7 +32,7 @@ Law enforcement increasingly encounters AI-generated images as potential evidenc
 ### 1. Clone the repository
 
 ```bash
-git clone <repo-url>
+git clone https://github.com/ashleyscruse/ai-generated-image-detection.git
 cd ai-generated-image-detection
 ```
 

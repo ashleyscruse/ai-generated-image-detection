@@ -98,6 +98,9 @@ dmypy.json
 .AppleDouble
 .LSOverride
 
+# Local notes (not shared)
+.notes/
+
 # Data files - don't commit large datasets
 data/raw/
 data/processed/
