@@ -101,6 +101,9 @@ dmypy.json
 # Local notes (not shared)
 .notes/
 
+# Archived docs (moved out of student view)
+.archive/
+
 # Data files - don't commit large datasets
 data/raw/
 data/processed/
@@ -111,6 +114,10 @@ data/processed/
 *.bmp
 *.tiff
 *.webp
+
+# Allow images in docs/ for GitHub Pages
+!docs/**/*.png
+!docs/**/*.jpg
 
 # But keep directory structure
 !data/raw/.gitkeep

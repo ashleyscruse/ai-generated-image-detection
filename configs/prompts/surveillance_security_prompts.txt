@@ -1,0 +1,59 @@
+Parking & Garage (10)
+1. grainy security camera footage of person walking through parking garage
+2. low quality CCTV screenshot of car entering parking garage at night
+3. overhead security camera view of empty parking lot at dusk
+4. blurry surveillance image of two people near vehicles in parking lot
+5. night vision security camera footage of parking garage entrance
+6. low resolution CCTV image of person running through parking lot
+7. grainy overhead shot of cars parked in outdoor lot, security camera
+8. surveillance footage of person standing next to car in parking garage
+9. CCTV screenshot of vehicle reversing in parking lot, low light
+10. security camera image of parking garage stairwell, harsh lighting
+
+Storefronts & Streets (10)
+11. blurry surveillance image of storefront entrance at night
+12. low quality CCTV footage of person entering convenience store
+13. grainy security camera image of street corner, daytime
+14. overhead CCTV shot of pedestrians on sidewalk, washed out colors
+15. surveillance camera screenshot of ATM exterior, low resolution
+16. security camera footage of alleyway between buildings at night
+17. grainy CCTV image of gas station forecourt, overhead angle
+18. low quality surveillance footage of crosswalk, multiple pedestrians
+19. blurry security camera image of building entrance, nighttime
+20. CCTV screenshot of person at bus stop, overexposed lighting
+
+Hallways & Buildings (10)
+21. overhead security camera view of office hallway, fluorescent lighting
+22. grainy CCTV footage of apartment building lobby
+23. low resolution security camera image of stairwell interior
+24. surveillance screenshot of elevator interior, fisheye lens distortion
+25. blurry security camera footage of corridor in public building
+26. overhead CCTV view of school hallway, empty
+27. grainy security camera image of warehouse interior, low light
+28. surveillance footage of hospital corridor, overhead angle
+29. low quality CCTV screenshot of hotel hallway, motion blur
+30. security camera image of building exit door, nighttime
+
+Exterior & Perimeter (10)
+31. night vision security camera footage of backyard fence
+32. grainy CCTV image of building perimeter at night
+33. low resolution surveillance footage of gated entrance, daytime
+34. security camera screenshot of rooftop access door, overcast sky
+35. blurry overhead CCTV view of loading dock area
+36. surveillance image of dumpster area behind commercial building
+37. grainy security camera footage of construction site entrance
+38. low quality CCTV screenshot of residential street, nighttime
+39. night vision camera image of park pathway, empty
+40. security camera footage of warehouse exterior, motion blur
+
+People & Activity (10)
+41. grainy CCTV footage of person in hoodie walking alone at night
+42. low resolution security camera image of group of people outside store
+43. overhead surveillance screenshot of person carrying large bag
+44. blurry CCTV image of two people arguing near building entrance
+45. security camera footage of person checking phone under streetlight
+46. grainy surveillance image of person climbing fence, nighttime
+47. low quality CCTV screenshot of crowd dispersing outside venue
+48. overhead security camera view of person sitting on bench alone
+49. surveillance footage of person looking directly at camera, grainy
+50. night vision CCTV image of lone figure crossing empty parking lot
