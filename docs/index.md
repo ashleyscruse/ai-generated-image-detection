@@ -75,11 +75,17 @@ You'll be working on **your own branch**. This keeps your work separate from eve
 
 ### Switch to your branch
 
+| Student | Branch Name |
+|---------|-------------|
+| Tigris McCauley | `tigris` |
+| Roland Kindell | `roland` |
+| Brandyn Daley | `brandyn` |
+| Nathan Bryant | `nathan` |
+| Michael Owusu | `michael` |
+
 ```bash
 git checkout your-branch-name
 ```
-
-Dr. Scruse will tell you your branch name. It will be something like `tigris`, `roland`, `brandyn`, `nathan`, or `michael`.
 
 ### Pull the latest changes
 
@@ -108,13 +114,13 @@ git push origin your-branch-name
 ### Rules
 
 - **Always push to your own branch**, never to `main`
-- **Pull from `main`** to get updates from Dr. Scruse
+- **Pull from `main`** to get updates from me
 - **Commit often** -- don't wait until everything is done
 - Write short, clear commit messages
 
 ### If you get a merge conflict
 
-Don't panic. Tell Dr. Scruse. She'll help you resolve it.
+Don't panic. Message me and I'll help you resolve it.
 
 ---
 
@@ -174,7 +180,7 @@ These folders exist on your machine (and on TACC) but are **not uploaded to GitH
 
 ## 6. Accessing TACC
 
-We use the **Texas Advanced Computing Center (TACC)** for GPU-heavy work like generating synthetic images. Dr. Scruse will add you to the allocation.
+We use the **Texas Advanced Computing Center (TACC)** for GPU-heavy work like generating synthetic images. me will add you to the allocation.
 
 ### Step 1: Create Your TACC Account
 
@@ -251,7 +257,7 @@ cd ai-generated-image-detection
 
 ## 7. Getting Help
 
-- **Stuck for more than 15 minutes?** Message Dr. Scruse. Don't spin your wheels.
+- **Stuck for more than 15 minutes?** Message me. Don't spin your wheels.
 - **Git issues?** Screenshot the error and send it.
 - **TACC problems?** Check the [TACC documentation](https://docs.tacc.utexas.edu/) or submit a [support ticket](https://portal.tacc.utexas.edu/tacc-consulting).
 
