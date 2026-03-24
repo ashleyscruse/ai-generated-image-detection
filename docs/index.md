@@ -9,6 +9,23 @@ This guide walks you through everything you need to work on the project. Bookmar
 
 ---
 
+## Repo Layout
+
+Here's what each folder in the repo is for:
+
+| Folder | What's Inside | Do You Touch It? |
+|--------|--------------|-----------------|
+| `notebooks/portfolios/` | **Your notebook.** This is where you do all your work. | Yes — this is your main workspace |
+| `configs/` | Project settings (image counts, categories, degradation levels) | No — just runs in the background |
+| `src/` | Python scripts that power the notebook (download, dedup, etc.) | No — the notebook calls these for you |
+| `docs/` | This guide | No |
+| `data/` | Where downloaded and generated images are stored locally | Created automatically when you run the notebook |
+| `results/` | Where evaluation metrics and figures will go (later in the semester) | Not yet |
+
+You only need to work in `notebooks/portfolios/`. Everything else supports it.
+
+---
+
 ## 1. Clone the Repo
 
 Open a terminal (Mac: Terminal app, Windows: PowerShell or Git Bash) and run:
