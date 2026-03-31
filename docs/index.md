@@ -7,6 +7,8 @@ title: Student Guide
 
 This guide walks you through everything you need to work on the project. Bookmark this page. Come back whenever you're stuck.
 
+> **Tigris McCauley:** Your guide is here: [Tigris's Research Guide](tigris-guide)
+
 ---
 
 ## Repo Layout
