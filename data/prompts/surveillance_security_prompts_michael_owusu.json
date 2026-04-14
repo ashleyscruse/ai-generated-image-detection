@@ -1,0 +1,17 @@
+{
+  "student": "Michael Owusu",
+  "category": "surveillance_security",
+  "prompts": [
+    "Low-quality CCTV footage of a person walking at night, motion blur, grainy texture, poor lighting",
+    "Blurry surveillance camera image of a crowded street with compression artifacts and low resolution",
+    "Bodycam footage of a suspect running, shaky camera, partial occlusion, uneven lighting",
+    "Security camera view of a parking lot at night, heavy noise and low visibility",
+    "Zoomed-in surveillance image with pixelation and distortion, unclear facial features",
+    "Dark alley captured on CCTV with shadows, blur, and low frame rate",
+    "Retail store security footage with overhead angle, washed-out colors and grain",
+    "Street camera image during rain, visibility reduced, reflections and blur",
+    "Subway surveillance footage with crowd occlusion and motion distortion",
+    "Old security camera footage with heavy compression artifacts and static noise"
+  ],
+  "count": 10
+}
