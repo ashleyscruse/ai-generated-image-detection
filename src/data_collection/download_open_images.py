@@ -245,6 +245,7 @@ def download_images(
 
 def save_manifest(image_df: pd.DataFrame, output_dir: Path, category: str) -> None:
     """Save a CSV manifest of downloaded images for tracking."""
+    output_dir.mkdir(parents=True, exist_ok=True)
     manifest_path = output_dir / f"manifest_{category}.csv"
     image_df.to_csv(manifest_path, index=False)
     print(f"Saved manifest: {manifest_path}")
