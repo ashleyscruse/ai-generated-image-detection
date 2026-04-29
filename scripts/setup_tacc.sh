@@ -30,12 +30,18 @@ pip install --upgrade pip
 pip install kaggle pandas numpy Pillow tqdm pyyaml imagehash
 
 # Set up Kaggle credentials
+# IMPORTANT: kaggle.json is NOT committed to this repo. Create it manually:
+#   1. Get a token from https://www.kaggle.com/settings (API -> Create New Token)
+#   2. mkdir -p ~/.kaggle
+#   3. nano ~/.kaggle/kaggle.json  (paste: {"username":"<you>","key":"<token>"})
+#   4. chmod 600 ~/.kaggle/kaggle.json
 mkdir -p ~/.kaggle
 if [ ! -f ~/.kaggle/kaggle.json ]; then
-    echo '{"username":"ashleyscruse","key":"KGAT_a9c2c1732e0a5b10e5f8f40c1724a66e"}' > ~/.kaggle/kaggle.json
-    chmod 600 ~/.kaggle/kaggle.json
-    echo "Kaggle configured."
+    echo "ERROR: ~/.kaggle/kaggle.json not found."
+    echo "Set it up manually before re-running this script (see comment above)."
+    exit 1
 fi
+chmod 600 ~/.kaggle/kaggle.json
 
 # Create data directories
 mkdir -p data/raw/videos/ucf_crime

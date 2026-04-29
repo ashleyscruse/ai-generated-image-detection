@@ -155,6 +155,8 @@ logs/
 .env.*.local
 secrets.yaml
 credentials.json
+.kaggle/
+kaggle.json
 
 # Temporary files
 *.tmp

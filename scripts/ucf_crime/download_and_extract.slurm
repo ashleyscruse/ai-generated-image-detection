@@ -2,7 +2,7 @@
 #SBATCH -J noble_ucf_download
 #SBATCH -o noble_ucf_download_%j.out
 #SBATCH -e noble_ucf_download_%j.err
-#SBATCH -p normal
+#SBATCH -p spr
 #SBATCH -N 1
 #SBATCH -n 1
 #SBATCH -t 04:00:00
@@ -17,7 +17,7 @@ echo "=== NOBLE: UCF Crime Download + Frame Extraction ==="
 echo "Started: $(date)"
 echo "Node: $(hostname)"
 
-cd $WORK/ai-generated-image-detection
+cd $WORK2/vista/ai-generated-image-detection
 source venv/bin/activate
 
 VIDEO_DIR="data/raw/videos/ucf_crime"
