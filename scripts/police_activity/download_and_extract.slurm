@@ -7,7 +7,7 @@
 #SBATCH -n 1
 #SBATCH -t 06:00:00
 #SBATCH -A TRA25001
-#SBATCH --mail-user=ascruse@morehouse.edu
+#SBATCH --mail-user=ashley.scruse@morehouse.edu
 #SBATCH --mail-type=END,FAIL
 
 # Download PoliceActivity bodycam archive from Internet Archive

@@ -7,7 +7,7 @@
 #SBATCH -n 1
 #SBATCH -t 04:00:00
 #SBATCH -A TRA25001
-#SBATCH --mail-user=ascruse@morehouse.edu
+#SBATCH --mail-user=ashley.scruse@morehouse.edu
 #SBATCH --mail-type=END,FAIL
 
 # Download UCF Crime Dataset and extract surveillance frames on TACC
