@@ -1,0 +1,312 @@
+% =============================================================================
+% Morehouse College Research Poster Template
+% =============================================================================
+% Brand colors:
+%   Maroon  #840028 (Pantone 202 C)  ..  used as accent only
+%   Gold    #C1A231 (Pantone 7753)   ..  used as accent only
+%   Gray    #A7A8AA (Cool Gray 6)    ..  rules and secondary text
+%   White   #FFFFFF                  ..  background (saves print ink)
+%
+% Compile with: pdflatex poster_morehouse.tex
+% (run twice if any internal references need to resolve)
+%
+% Default size: A0 landscape (1189mm x 841mm). To change to US 48x36 inch
+% landscape, replace "a0paper" below with "custom" and add the custom size
+% lines shown in the comment block.
+%
+% To swap content: search for "EXAMPLE" comments throughout. Each \block
+% command takes a title and a body. Add or remove blocks as needed.
+% =============================================================================
+
+\documentclass[25pt, a0paper, landscape, margin=0mm, innermargin=15mm,
+               blockverticalspace=15mm, colspace=15mm,
+               subcolspace=8mm]{tikzposter}
+
+% For US 48 x 36 inch landscape instead, comment the line above and use:
+%   \documentclass[25pt, custom, landscape, margin=0mm, innermargin=15mm,
+%                  blockverticalspace=15mm, colspace=15mm]{tikzposter}
+%   \geometry{paperwidth=48in, paperheight=36in}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{microtype}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\hypersetup{colorlinks=true, linkcolor=morehousemaroon,
+            urlcolor=morehousemaroon, citecolor=morehousemaroon}
+
+% =============================================================================
+% Morehouse brand colors
+% =============================================================================
+\definecolor{morehousemaroon}{HTML}{840028}
+\definecolor{morehousegold}{HTML}{C1A231}
+\definecolor{morehousegray}{HTML}{A7A8AA}
+\definecolor{morehouseblack}{HTML}{000000}
+
+% =============================================================================
+% Custom Morehouse poster theme: white background, maroon and gold accents
+% =============================================================================
+\definebackgroundstyle{morehouseBg}{
+    \draw[fill=white, draw=none] (bottomleft) rectangle (topright);
+}
+\definetitlestyle{morehouseTitle}{
+    width=\paperwidth, roundedcorners=0, linewidth=0pt, innersep=12mm,
+    titletotopverticalspace=0mm, titletoblockverticalspace=15mm
+}{
+    \begin{scope}[line width=0pt]
+    \draw[draw=none, fill=white]
+        (\titleposleft, \titleposbottom) rectangle (\titleposright, \titapostop);
+    \draw[draw=none, fill=morehousemaroon]
+        (\titleposleft, \titleposbottom)
+        rectangle (\titleposright, \titleposbottom + 6mm);
+    \draw[draw=none, fill=morehousegold]
+        (\titleposleft, \titleposbottom + 6mm)
+        rectangle (\titleposright, \titleposbottom + 8mm);
+    \end{scope}
+}
+\definecolorpalette{morehousePalette}{
+    \definecolor{colorOne}{named}{morehousemaroon}
+    \definecolor{colorTwo}{named}{morehousegold}
+    \definecolor{colorThree}{named}{morehousegray}
+}
+\definecolorstyle{morehouseColors}{\colorlet{notebgcolor}{morehousegold!30}}{
+    \colorlet{backgroundcolor}{white}
+    \colorlet{framecolor}{morehousemaroon}
+    \colorlet{titlefgcolor}{morehousemaroon}
+    \colorlet{titlebgcolor}{white}
+    \colorlet{blocktitlebgcolor}{white}
+    \colorlet{blocktitlefgcolor}{morehousemaroon}
+    \colorlet{blockbodybgcolor}{white}
+    \colorlet{blockbodyfgcolor}{morehouseblack}
+    \colorlet{innerblocktitlebgcolor}{morehousegold}
+    \colorlet{innerblocktitlefgcolor}{morehouseblack}
+    \colorlet{innerblockbodybgcolor}{white}
+    \colorlet{innerblockbodyfgcolor}{morehouseblack}
+    \colorlet{notefgcolor}{morehouseblack}
+    \colorlet{notebgcolor}{morehousegold!20}
+    \colorlet{notefrcolor}{morehousegold}
+}
+\defineblockstyle{morehouseBlock}{
+    titlewidthscale=1, bodywidthscale=1, titlecenter,
+    titleoffsetx=0pt, titleoffsety=0pt, bodyoffsetx=0pt, bodyoffsety=0pt,
+    bodyverticalshift=0mm, roundedcorners=0, linewidth=2pt,
+    titleinnersep=8mm, bodyinnersep=8mm
+}{
+    \draw[color=morehousemaroon, fill=blockbodybgcolor,
+          line width=\blocklinewidth] (blockbody.south west)
+          rectangle (blockbody.north east);
+    \ifBlockHasTitle
+        \draw[draw=none, fill=morehousemaroon]
+            (blocktitle.south west) rectangle (blocktitle.north east);
+        \node[inner sep=0pt, anchor=center, text=white]
+            at (blocktitle.center) {\textbf{\strut\blocktitletext}};
+    \fi
+}
+
+\usebackgroundstyle{morehouseBg}
+\usetitlestyle{morehouseTitle}
+\usecolorpalette{morehousePalette}
+\usecolorstyle{morehouseColors}
+\useblockstyle{morehouseBlock}
+
+% =============================================================================
+% Title block content
+% =============================================================================
+\title{\parbox{0.95\linewidth}{\centering
+    \color{morehousemaroon}\textbf{POSTER TITLE GOES HERE: Replace With Your Project's Working Title}
+}}
+
+\author{\parbox{0.95\linewidth}{\centering\color{morehouseblack}
+    \large
+    First Author$^{1}$, Second Author$^{1}$, Third Author$^{1}$, PI Name$^{1,2}$
+}}
+
+\institute{\parbox{0.95\linewidth}{\centering\color{morehouseblack}
+    \normalsize
+    $^{1}$Morehouse College, Atlanta, GA \quad
+    $^{2}$Center for Broadening Participation in Computing
+}}
+
+% Optional logo. Drop your file into ../assets/ and uncomment.
+% \titlegraphic{\includegraphics[height=4cm]{../assets/morehouse_logo.png}}
+
+\begin{document}
+
+\maketitle[width=\paperwidth, titletotopverticalspace=10mm]
+
+% =============================================================================
+% Row 1: Background and Dataset construction (two columns)
+% =============================================================================
+\begin{columns}
+
+\column{0.5}
+\block{Background}{
+    \textbf{The problem.} Existing AI-generated image detection tools are
+    trained on social media imagery: clean, well-lit, high-resolution.
+    Real evidence footage in law enforcement settings is none of those
+    things. Bodycam footage and surveillance video are typically grainy,
+    compressed, low-resolution, and recorded under variable lighting.
+
+    \vspace{4mm}
+    \textbf{Why it matters.} Recent court cases have surfaced AI-generated
+    images presented as evidence (Mendones v. Cushman, 2025). Federal
+    Rule of Evidence 707 is being drafted to address admissibility of
+    AI-generated content. Detection tools that fail on the very imagery
+    courts must evaluate create a trust gap in the legal system.
+
+    \vspace{4mm}
+    \textbf{Our contribution.} We build the first domain-specific
+    benchmark for evaluating AI-image detectors on law enforcement
+    imagery, spanning multiple generator architectures and realistic
+    image-quality conditions.
+}
+
+\column{0.5}
+\block{Dataset Construction}{
+    \begin{itemize}
+        \item \textbf{Real images.} Stratified sample of N frames across
+              14 categories of UCF Crime surveillance footage, plus N
+              general-domain images from Open Images V7.
+        \item \textbf{Synthetic images.} N images per generator, paired by
+              prompt across three architectures:
+              \begin{itemize}
+                  \item FLUX.1-schnell (DiT, current SOTA)
+                  \item Realistic Vision 5.1 (UNet, SD 1.5 fine-tune,
+                        most-prevalent in-the-wild fabricator tool)
+                  \item SDXL (UNet, established baseline)
+              \end{itemize}
+        \item \textbf{Quality levels.} Each image rendered at three
+              degradation levels:
+              \begin{itemize}
+                  \item Clean: no degradation
+                  \item Moderate: JPEG Q50, blur, contrast reduction
+                  \item Heavy: JPEG Q30, downscaling, noise, blur
+                        (simulates poor bodycam and old CCTV)
+              \end{itemize}
+        \item \textbf{Total:} N images at 3 quality levels = N evaluation
+              instances.
+    \end{itemize}
+}
+
+\end{columns}
+
+% =============================================================================
+% Row 2: Methods (full width, with subblocks)
+% =============================================================================
+\block{Methods}{
+    \begin{minipage}[t]{0.48\linewidth}
+        \textbf{Detector evaluation.} Each detection tool (commercial APIs
+        and open-source models) is run against every image in the benchmark.
+        We measure accuracy, precision, recall, F1, and AUC-ROC, broken
+        down by:
+        \begin{itemize}
+            \item Real vs. synthetic
+            \item Generator architecture (FLUX vs. RV vs. SDXL)
+            \item Image category (surveillance, indoor, outdoor, etc.)
+            \item Degradation level (clean, moderate, heavy)
+        \end{itemize}
+    \end{minipage}\hfill
+    \begin{minipage}[t]{0.48\linewidth}
+        \textbf{Paired-prompt design.} Each prompt is rendered through all
+        three generators with matched seeds. This isolates detector
+        sensitivity to architecture from sensitivity to content,
+        enabling claims about generator-specific failure modes.
+
+        \vspace{4mm}
+        \textbf{Compute.} Generation runs on TACC Vista (NVIDIA GH200
+        partition). Total GPU-hours: approximately N. Reproducibility
+        package and full prompts are available in the project
+        repository.
+    \end{minipage}
+}
+
+% =============================================================================
+% Row 3: Results (two columns: numbers + figure)
+% =============================================================================
+\begin{columns}
+
+\column{0.5}
+\block{Preliminary Results}{
+    \textbf{Pilot evaluation} of an off-the-shelf detector
+    (\texttt{umm-maybe/AI-image-detector}, 422 images) shows accuracy
+    falling below random chance as image quality degrades.
+
+    \vspace{6mm}
+    \begin{center}
+    \begin{tabular}{lrrr}
+        \toprule
+        \textbf{Quality} & \textbf{Acc.} & \textbf{F1} & \textbf{AUC} \\
+        \midrule
+        Clean    & 44.5\% & 37.4\% & 0.402 \\
+        Moderate & 45.1\% & 17.1\% & 0.381 \\
+        Heavy    & 34.5\% & 18.2\% & 0.265 \\
+        \bottomrule
+    \end{tabular}
+    \end{center}
+
+    \vspace{6mm}
+    \textbf{Key finding.} Detection accuracy drops as image quality
+    drops, exactly the direction it should not go for forensic use.
+    Full evaluation across 3 generators and N detectors is in progress
+    on TACC Vista.
+}
+
+\column{0.5}
+\block{Discussion}{
+    \textbf{Architecture generalization gap.} Detectors trained
+    primarily on UNet-based generator outputs (SD 1.x, SDXL) are
+    expected to underperform on transformer-based generators (FLUX).
+    The benchmark is designed to quantify this gap.
+
+    \vspace{4mm}
+    \textbf{Domain gap.} Detectors trained on social media imagery
+    are expected to underperform on surveillance domain content.
+    Combining real surveillance frames (UCF Crime) with general-domain
+    images (Open Images) lets us isolate this effect.
+
+    \vspace{4mm}
+    \textbf{Compounding under degradation.} The two gaps above are
+    expected to compound non-linearly under realistic image-quality
+    degradation, with the worst case (DiT generator at heavy
+    degradation) showing the largest detection failure.
+
+    \vspace{4mm}
+    \textbf{Practical implication.} Existing AI-detection tools should
+    not be used as standalone forensic instruments in law enforcement
+    contexts without further calibration on domain-matched data.
+}
+
+\end{columns}
+
+% =============================================================================
+% Row 4: Acknowledgments and references (full width)
+% =============================================================================
+\block[bodyoffsety=0mm, titleoffsety=0mm]{Acknowledgments and References}{
+    \begin{minipage}[t]{0.55\linewidth}
+        \footnotesize
+        \textbf{Funding.} This work is supported by the National
+        Organization of Black Law Enforcement Executives (NOBLE)
+        through a research grant to Morehouse College.
+
+        \textbf{Compute.} Texas Advanced Computing Center (TACC) Vista
+        and Stampede3 systems, NSF ACCESS allocation TRA25001.
+
+        \textbf{Data.} UCF Crime Dataset (Sultani et al., 2018);
+        Open Images Dataset V7 (Kuznetsova et al., 2020).
+    \end{minipage}\hfill
+    \begin{minipage}[t]{0.40\linewidth}
+        \footnotesize
+        \textbf{Project repository:} \url{https://github.com/...}\\
+        \textbf{Dataset card:} \url{https://huggingface.co/datasets/...}\\
+        \textbf{Contact:} ashley.scruse@morehouse.edu
+
+        \vspace{4mm}
+        \textit{Code and full prompts release upon paper acceptance.}
+    \end{minipage}
+}
+
+\end{document}

@@ -104,6 +104,20 @@ dmypy.json
 # Archived docs (moved out of student view)
 .archive/
 
+# Internal Claude / agent config (not public)
+.claude/
+
+# Internal meeting notes
+meeting_notes/
+
+# Internal student docs (private permissions)
+*.docx
+
+# Internal share-out drafts not for publication
+share_outs/feedback.md
+share_outs/*email*.md
+share_outs/2026-05-14_noble_funder_v1.md
+
 # Data files - don't commit large datasets
 data/raw/
 data/processed/
@@ -118,6 +132,9 @@ data/processed/
 # Allow images in docs/ for GitHub Pages
 !docs/**/*.png
 !docs/**/*.jpg
+
+# Allow result figure PNGs (referenced in README)
+!results/figures/*.png
 
 # But keep directory structure
 !data/raw/.gitkeep
@@ -136,8 +153,7 @@ data/processed/
 *.bin
 
 # Results - large files
-results/metrics/*.csv
-results/figures/*.png
+# Note: result figure PNGs and metric CSVs are allowed (small, README-referenced)
 results/figures/*.pdf
 
 # But keep directory structure
